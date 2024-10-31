@@ -14,9 +14,19 @@ const Main = () => {
             Oi, me chamo<br/> <span className="text-[#18819e]">Beatriz</span>
           </h1>
           <p className="text-[#dfd9ff] font-medium lg:text-[30px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2">
-            Desenvolvimento FullStack há 1 anos, <br className="sm:block hidden" />
+            Desenvolvimento FullStack há 1 ano, <br className="sm:block hidden" />
             Mobile e Web.
           </p>
+          <div className="mt-4">
+            <a
+              href="https://drive.google.com/file/d/1y3cBthW1UydkFEBRigx7wkxA0OrlAxjD/view?usp=drivesdk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-[#18819e] text-white text-[20px] font-bold py-4 px-6 rounded-2xl shadow hover:bg-white hover:text-[#18819e] transition duration-300"
+            >
+              CV_Beatriz
+            </a>
+          </div>
         </div>
       </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>

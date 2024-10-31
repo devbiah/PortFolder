@@ -4,14 +4,27 @@ import logo from '../assets/logo.png';
 
 const navLinks = [
   { id: "About", title: "Sobre" },
-  { id: "Tech", title: "Tecnologias" },
   { id: "Experience", title: "Experiência" },
-  { id: "Contact", title: "Contato" },
+  { id: "Tech", title: "Tecnologias" },
 ];
 
 const Navbar = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const headerOffset = 100; 
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <nav className={` w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    <nav className={`w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
@@ -26,12 +39,12 @@ const Navbar = () => {
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li key={nav.id}>
-              <a
-                href={`#${nav.id}`}
+              <button
+                onClick={() => scrollToSection(nav.id)}
                 className='text-secondary hover:text-white text-[18px] font-medium cursor-pointer'
               >
                 {nav.title}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

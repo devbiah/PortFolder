@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div id="contact" className="bg-[#282c34] text-white py-5 text-center">
       <div className="mb-5">
-        <h3 className="text-2xl mb-3">Contact Me:</h3>
+        <h3 className="text-2xl mb-3">Contatos:</h3>
         <div className="flex justify-center gap-4 mb-5">
           <a href="https://github.com/devbiah/" target="_blank">
             <img src={github} alt="GitHub" className="w-7 h-7 transition-transform duration-200 hover:scale-110" />
